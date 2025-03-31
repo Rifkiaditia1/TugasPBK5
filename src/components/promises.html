@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Belajar JavaScript</h1>
+    <h2>Promises</h2>
+
+    <p>Wait 5 second (5000 milisecond) for this page to change</p>
+
+    <h1 id="demo"></h1>
+
+    <script>
+        const myPromises = new Promises(function(myResoulve, myReject) {
+            setTimeout(function(){ myResoulve("Rifki Aditia");}, 5000);
+        });
+
+        myPromises.then(function(value) {
+            document.getElementById("demo").innerHTML = value;
+        })
+    </script>
+</body>
+</html>
